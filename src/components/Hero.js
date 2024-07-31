@@ -54,7 +54,7 @@ const Hero = () => {
         <div className="bg-white min-h-screen flex flex-col items-center overflow-hidden ">
             <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col  items-center justify-center gap-3">
                 <div className="md:w-1/2 mb-8 md:mb-0 flex items-center justify-center flex-col">
-                    <h1 className="text-5xl mt-16 lg:mt-0 md:text-7xl font-bold text-black mb-4 tracking-wide text-center ">
+                    <h1 className="text-5xl mt-16 lg:mt-10 md:text-7xl font-bold text-black mb-4 tracking-wide text-center ">
                         The loud voice <br /> of your brand
                     </h1>
 
@@ -83,11 +83,11 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
-            <div className='flex justify-between items-center px-5 mt-10'>
-                <p className="lg:text-xl text-xs w-[50%] lg:w-full text-gray-600 ">
+            <div className='flex justify-between items-center px-5 mt-10 w-full lg:px-32'>
+                <p className="lg:text-sm text-xs w-[50%] lg:w-full text-gray-600 ">
                     We will help you show your ads to more people for less money
                 </p>
-                <button className=" text-black text-sm lg:text-lg  hover:bg-gray-800 transition duration-300">
+                <button className=" text-black text-sm lg:text-sm  hover:bg-gray-800 transition duration-300">
                     EXPLORE
                 </button>
             </div>
