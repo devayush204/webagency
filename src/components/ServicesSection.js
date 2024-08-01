@@ -194,13 +194,13 @@ const ServiceCard = ({ title, description, icon: Icon, isContentMarketing }) => 
     >
       <h3
         ref={titleRef}
-        className={`text-4xl font-bold mb-2 ${isContentMarketing ? "absolute bottom-28" : ""}`}
+        className={`text-4xl font-bold mb-2 ${isContentMarketing ? "absolute bottom-16 lg:bottom-28" : ""}`}
       >
         {title}
       </h3>
       <p
         ref={descriptionRef}
-        className={`${isContentMarketing ? "absolute bottom-16" : ""}`}
+        className={`${isContentMarketing ? "absolute bottom-5 lg:bottom-16" : ""}`}
       >
         {description}
       </p>
@@ -213,7 +213,7 @@ const ServiceCard = ({ title, description, icon: Icon, isContentMarketing }) => 
           ></div>
           <Icon
             ref={iconRef}
-            className="absolute left-24 top-12 text-8xl rotate-[270deg] text-white"
+            className="absolute left-16 lg:left-24 top-12 text-8xl rotate-[270deg] text-white"
           />
 
           <div ref={linesRef} className="absolute right-14 top-20 w-24">

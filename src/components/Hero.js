@@ -170,7 +170,7 @@ const Hero = () => {
         <div className="bg-white h-[100vh] flex flex-col items-center justify-between py-10 overflow-hidden">
             <div className="w-full mx-auto px-2 lg:px-8 py-12 flex flex-col items-center justify-center gap-3">
                 <div className="md:w-1/2 mb-8 md:mb-0 flex items-center justify-center flex-col">
-                    <h1 className="text-5xl mt-3 md:text-7xl font-bold text-black mb-4 tracking-wide text-center heading">
+                    <h1 className="text-5xl lg:mt-3 md:text-7xl font-bold text-black mb-4 tracking-wide text-center heading">
                         The loud voice <br /> of your brand
                     </h1>
                 </div>
