@@ -217,7 +217,7 @@ const ServiceCard = ({ title, description, icon: Icon, isContentMarketing }) => 
           />
 
           <div ref={linesRef} className="absolute right-14 top-20 w-24">
-            <div className="w-full h-1 bg-white mb-4">d</div>
+            <div className="w-full h-1 bg-white mb-4"></div>
             <div className="w-full h-1 bg-white mb-4"></div>
             <div className="w-full h-1 bg-white mb-4"></div>
             <div className="w-full h-1 bg-white"></div>
