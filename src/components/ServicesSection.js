@@ -209,7 +209,7 @@ const ServiceCard = ({ title, description, icon: Icon, isContentMarketing }) => 
         <>
           <div
             ref={circleRef}
-            className="absolute -right-14 top-10 bg-pink-400 p-20 rounded-full flex items-center justify-center"
+            className="absolute -right-14 top-10 bg-[#F13865] p-20 rounded-full flex items-center justify-center"
           ></div>
           <Icon
             ref={iconRef}

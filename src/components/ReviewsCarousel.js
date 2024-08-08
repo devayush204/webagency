@@ -74,7 +74,7 @@ const ContinuousReviews = () => {
                     <div key={index} className="flex flex-col shrink-0 px-4 ml-10 relative w-full lg:w-[40vw] border-r-[3px] border-r-black">
                         <div className="bg-white px-6 flex flex-col md:gap-7 gap-4">
                             <div className="w-[90%]">
-                                <span><svg className='w-9 absolute -left-3 fill-pink-500 ' version="1.1" id="Capa_1" viewBox="0 0 32 32"   transform="matrix(-1, 0, 0, -1, 0, 0)" >
+                                <span><svg className='w-9 absolute -left-3 fill-[#F13865] ' version="1.1" id="Capa_1" viewBox="0 0 32 32"   transform="matrix(-1, 0, 0, -1, 0, 0)" >
 
                                     <g id="SVGRepo_bgCarrier" stroke-width="0" />
 

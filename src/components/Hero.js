@@ -38,7 +38,7 @@ const Hero = () => {
               ".desktop-icon6": { x: -15, y: 0, scale: 0.85 },
               ".desktop-icon7": { x: -25, y: 27, scale: 1.2     },
               ".desktop-icon8": { x: 20, y: -10, scale: 0.7 },
-              ".desktop-icon9": { x: 14, y: -20, scale: 0.99 },
+              ".desktop-icon9": { x: 14, y: -15, scale: 0.99 },
             },
           },
           mobileIcons: {
@@ -175,7 +175,7 @@ const Hero = () => {
                     </h1>
                 </div>
                 <div className="md:w-1/2 relative flex items-center justify-center">
-                    <div className="bg-[#f97eb9] rounded-full lg:w-[45%] z-20 p-3 lg:p-12">
+                    <div className="bg-[#F13865] rounded-full lg:w-[45%] z-20 p-3 lg:p-12">
                         <div className="relative w-48 h-48 md:w-60 md:h-60 megaphone-image">
                             <Image
                                 src={img1}
@@ -192,7 +192,7 @@ const Hero = () => {
                         <p className="text-5xl text-gray-800 absolute top-[50%] left-[50%] font-bold desktop-icon3">
                             in
                         </p>
-                        <FaDribbble className="text-6xl bg-pink-400 p-3 rounded-full text-gray-800 absolute top-[50%] left-[50%] desktop-icon4" />
+                        <FaDribbble className="text-6xl bg-[#F13865] p-3 rounded-full text-gray-800 absolute top-[50%] left-[50%] desktop-icon4" />
                         <FaFacebook className="text-6xl text-gray-800 absolute top-[50%] left-[50%] desktop-icon5" />
                         <span className="p-3 border-[1px] desktop-icon6 rounded-full bg-white border-gray-800 absolute top-[50%] left-[50%]"></span>
                         <span className="p-4 border-[1px] desktop-icon7 rounded-full bg-gray-800 border-gray-800 absolute top-[50%] left-[50%]"></span>
@@ -213,7 +213,7 @@ const Hero = () => {
                             in
                         </p>
                         <FaDribbble
-                            className="text-5xl top-[50%] left-[50%] bg-pink-400 p-2 rounded-full text-gray-800 absolute mobile-icon4"
+                            className="text-5xl top-[50%] left-[50%] bg-[#F13865] p-2 rounded-full text-gray-800 absolute mobile-icon4"
                         />
                         <FaFacebook
                             className="text-5xl top-[50%] left-[50%] text-gray-800 absolute mobile-icon5"

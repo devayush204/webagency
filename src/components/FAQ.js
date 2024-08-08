@@ -110,7 +110,7 @@ export default function FAQ() {
           <div
             key={index}
             className={`mb-4 transition-all duration-300 ease-in-out ${
-              openIndex === index ? 'bg-orange-200' : 'border-[1px] border-black'
+              openIndex === index ? 'bg-[#F13865]' : 'border-[1px] border-black'
             } p-4 rounded-3xl`}
           >
             <div

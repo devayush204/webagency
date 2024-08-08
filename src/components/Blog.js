@@ -14,7 +14,7 @@ const Blog = () => {
             content: 'Email marketing remains one of the most powerful tools for businesses to connect with their audience and drive conversions.',
             image: img1,
             tag: 'Email marketing',
-            backgroundColor: '#f97eb9'
+            backgroundColor: '#F13865'
         },
         {
             title: 'Search engine site promotion or contextual advertising. What to choose?',
