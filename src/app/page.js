@@ -6,17 +6,19 @@ import Navbar from "@/components/Navbar";
 import ReviewsCarousel from "@/components/ReviewsCarousel";
 import ServicesSection from "@/components/ServicesSection";
 import Image from "next/image";
+import Home from "@/components/demo-bc/pages/Home";
 
-export default function Home() {
+export default function Page() {
   return (
     <section>
-      <Navbar/>
+      {/* <Navbar/>
       <Hero/>
       <ServicesSection/>
       <ReviewsCarousel/>
       <FAQ/>
       <Blog/>
-      <Footer/>
+      <Footer/> */}
+      <Home/>
     </section>
   );
 }
