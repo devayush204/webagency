@@ -11,8 +11,8 @@ function CallToAction() {
           New In Cryptocurrency?
         </h2>
         <p className="mt-3 text-lg leading-7 text-zinc-400 max-md:max-w-full">
-          We'll tell you what cryptocurrencies are, how they work and why you
-          should own one right now. So let's do it.
+          We&apos;ll tell you what cryptocurrencies are, how they work and why you
+          should own one right now. So let&apos;s do it.
         </p>
       </div>
       <button className="overflow-hidden gap-2.5 self-stretch px-6 py-4 my-auto text-base font-semibold text-center text-white bg-teal-500 rounded-xl max-md:px-5">
