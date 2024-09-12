@@ -86,7 +86,7 @@ function Hero() {
               type="text"
               placeholder="E-mail"
             />
-            <button className="absolute hover:bg-purple-700 transition-all left-[40%] top-[10%] bg-purple-500 text-lg text-white py-2.5 px-14 md:px-16 lg:px-10 rounded-full ">
+            <button className="absolute hover:bg-purple-700 transition-all left-[40%] top-[10%] bg-purple-500 text-lg text-white py-2.5 px-10 md:px-16 lg:px-10 rounded-full ">
               Start Today
             </button>
           </div>
