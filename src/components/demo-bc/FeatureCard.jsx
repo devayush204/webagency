@@ -8,7 +8,7 @@ function FeatureCard({ icon, title, description }) {
       <div className="flex flex-col flex-1 shrink self-stretch my-auto w-full basis-0 ">
         <div className="flex flex-col w-full ">
           <div className="flex gap-2.5 items-start w-20 min-h-[80px]">
-            <img
+            <Image
               src={icon}
               alt={`${title} icon`}
               className="object-contain w-20 aspect-square"

@@ -1,30 +1,25 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation"; // Import usePathname
+import { usePathname } from "next/navigation";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import logo from "../../../public/logo.png";
+import { gsap } from "gsap"; // Import GSAP
 
 const navItems = [
   { label: "Home", link: "/" },
   { label: "AboutUs", link: "/aboutus" },
   { label: "ContactUs", link: "/#lets-connect" },
-  // { label: 'NBC Bank', link: '/nbc-bank' },
-  // { label: 'ICO', link: '/ico' },
-  // { label: 'Token', link: '/token' },
-  // { label: 'Road Map', link: '/road-map' },
-  // { label: 'UAE-Golden Visa', link: '/uae-golden-visa' },
-  // { label: 'Asset Management', link: '/asset-management' },
-  // { label: 'Team', link: '/team' },
-  // { label: 'Contact Us', link: '/contact-us' },
 ];
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [theme, setTheme] = useState("theme1");
-  const pathname = usePathname(); // Get the current path
+  const pathname = usePathname();
   const [scrollY, setScrollY] = useState(0);
+  
+  const navbarRef = useRef(null); // Create a reference for the navbar
 
   const handleScroll = () => {
     setScrollY(window.scrollY);
@@ -37,51 +32,61 @@ function Header() {
     };
   }, []);
 
+  // Animation on first load
+  useEffect(() => {
+    const navbarElement = navbarRef.current;
+
+    // GSAP animation: start width from 0 and expand to full width
+    gsap.fromTo(
+      navbarElement,
+      { width: "0%", transformOrigin: "center" },
+      { width: "100%", duration: 2, ease: "power2.inOut" } // Change duration and ease as per your liking
+    );
+  }, []);
+
   const getThemeClasses = () => {
     switch (theme) {
       case "theme1":
         return {
-          // background: 'bg-midnight-purple',
           background: "bg-white",
           text: "text-black",
           hover: "hover:text-black",
-          active: "text-purple-400", // Active color for theme 1
+          active: "text-purple-400",
         };
       case "theme2":
         return {
           background: "bg-dark-slate",
           text: "text-bright-yellow",
           hover: "hover:text-orange",
-          active: "text-orange", // Active color for theme 2
+          active: "text-orange",
         };
       case "theme3":
         return {
           background: "bg-deep-indigo",
           text: "text-electric-pink",
           hover: "hover:text-hot-pink",
-          active: "text-hot-pink", // Active color for theme 3
+          active: "text-hot-pink",
         };
       case "theme4":
         return {
           background: "bg-charcoal",
           text: "text-mint-green",
           hover: "hover:text-spring-green",
-          active: "text-spring-green", // Active color for theme 4
+          active: "text-spring-green",
         };
       case "theme5":
         return {
           background: "bg-dark-navy",
           text: "text-soft-amber",
           hover: "hover:text-coral",
-          active: "text-coral", // Active color for theme 5
+          active: "text-coral",
         };
       default:
         return {
-          // background: 'bg-midnight-purple',
           background: "bg-white",
           text: "text-white",
           hover: "hover:text-cyan-700",
-          active: "text-purple-400", // Active color for theme 1
+          active: "text-purple-400",
         };
     }
   };
@@ -90,7 +95,8 @@ function Header() {
 
   return (
     <header
-      className={`${themeClasses.background} ${themeClasses.text} bg-transparent shadow-xl z-40 shadow- navbar  fixed flex items-center md:justify-between  lg:px-40 px-10 py-3 md:py-7 w-[100vw] backdrop-blur-md bg-opacity-20 `}
+      ref={navbarRef} // Reference for GSAP animation
+      className={`${themeClasses.background} ${themeClasses.text} bg-transparent shadow-xl z-40 shadow- navbar  fixed flex items-center md:justify-between  lg:px-40 px-10 py-3 md:py-4 w-[100vw] backdrop-blur-md bg-opacity-20`}
     >
       <div className="flex justify-between items-center  w-full">
         <Link href="/">
@@ -154,13 +160,6 @@ function Header() {
           ))}
         </div>
       </div>
-      {/* <div className="flex gap-4 mt-4 justify-center">
-        <button onClick={() => setTheme('theme1')} className=" bg-midnight-purple text-neon-cyan">Theme 1</button>
-        <button onClick={() => setTheme('theme2')} className=" bg-dark-slate text-bright-yellow">Theme 2</button>
-        <button onClick={() => setTheme('theme3')} className=" bg-deep-indigo text-electric-pink">Theme 3</button>
-        <button onClick={() => setTheme('theme4')} className=" bg-charcoal text-mint-green">Theme 4</button>
-        <button onClick={() => setTheme('theme5')} className=" bg-dark-navy text-soft-amber">Theme 5</button>
-      </div> */}
     </header>
   );
 }

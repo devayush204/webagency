@@ -1,4 +1,9 @@
-import React from "react";
+"use client"; // Ensure this is present for Next.js client-side rendering
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const steps = [
   {
@@ -20,7 +25,7 @@ const steps = [
 
 const GetStartedStep = ({ icon, title, description }) => {
   return (
-    <div className="flex items-start gap-4 p-5 bg-white/50 rounded-full shadow-md mb-4 max-md:w-full">
+    <div className="flex items-start gap-4 p-5 bg-white/50 rounded-full shadow-md mb-4 max-md:w-full hover:bg-purple-50 transition-colors duration-300">
       <img src={icon} alt={title} className="w-10 h-10" />
       <div>
         <h3 className="text-lg font-semibold text-zinc-900">{title}</h3>
@@ -31,8 +36,34 @@ const GetStartedStep = ({ icon, title, description }) => {
 };
 
 function GetStarted() {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    const steps = section.querySelectorAll(".step");
+
+    gsap.fromTo(
+      steps,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        stagger: 0.2,
+        duration: 1,
+        scrollTrigger: {
+          trigger: section,
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      }
+    );
+  }, []);
+
   return (
-    <section className="flex flex-wrap gap-10 items-start mt-20 w-full max-md:flex-col max-md:px-5">
+    <section
+      ref={sectionRef}
+      className="flex flex-wrap gap-10 items-start mt-20 w-full max-md:flex-col max-md:px-5"
+    >
       {/* Left Section */}
       <div className="flex flex-col flex-1 shrink basis-0 min-w-[240px] max-md:min-w-full">
         <div className="flex flex-col justify-center w-full">
@@ -53,7 +84,7 @@ function GetStarted() {
       {/* Right Section */}
       <div className="flex flex-col flex-1 max-md:w-full">
         {steps.map((step, index) => (
-          <GetStartedStep key={index} {...step} />
+          <GetStartedStep key={index} {...step} className="step" />
         ))}
       </div>
     </section>
