@@ -33,12 +33,12 @@ const featuresData = [
 
 function Features() {
   return (
-    <section className="flex flex-col mt-48 w-full max-w-[1256px] max-md:mt-10 max-md:max-w-full">
-      <div className="flex flex-col w-full text-center max-md:max-w-full">
-        <h2 className="flex-1 shrink gap-2.5 p-2.5 w-full text-4xl font-bold leading-none text-gray-100 max-md:max-w-full">
-          CryptoCap Amazing Features
-        </h2>
-        <p className="flex-1 shrink gap-2.5 p-1.5 mt-2.5 w-full text-lg leading-relaxed text-zinc-400 max-md:max-w-full">
+    <section className="flex flex-col mt-32  w-full">
+      <div className="flex flex-col w-full text-center  gap-4">
+        <p className=" w-full text-3xl md:text-5xl font-bold text-black ">
+          NBCB <span className="text-purple-500">Amazing Features</span> 
+        </p>
+        <p className=" w-full text-lg text-zinc-600 ">
           Explore sensational features to prepare your best investment in
           cryptocurrency
         </p>

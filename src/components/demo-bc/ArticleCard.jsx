@@ -19,7 +19,7 @@ function ArticleCard({ title, category, description, image }) {
               {category}
             </div>
           </div>
-          <h3 className="flex-1 shrink gap-2.5 self-stretch mt-3.5 w-full text-base font-semibold leading-6 text-white">
+          <h3 className="flex-1 shrink gap-2.5 self-stretch mt-3.5 w-full text-base font-semibold leading-6 text-black">
             {title}
           </h3>
           <p className="flex-1 shrink gap-2.5 mt-3.5 w-full text-sm text-zinc-400">

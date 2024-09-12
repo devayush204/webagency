@@ -19,4 +19,11 @@
 .flex-none {
     flex: none;
 }
-
+.shadow-navbar {
+    background: linear-gradient(
+      to bottom,
+      rgba(9, 9, 9, 0.522) 50%,
+      transparent 80%
+    );
+  }
+  

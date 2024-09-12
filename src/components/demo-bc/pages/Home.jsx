@@ -10,15 +10,23 @@ import CallToAction from "../CallToAction";
 import MarketUpdate from "../MarketUpdate";
 import GetStarted from "../GetStarted";
 import LearnCrypto from "../LearnCrypto";
+import IBANSection from "../IBANSection";
+import Progress from "../Progress";
+import PolygonLayerSolution from "../PolygonLayer";
+import TeamMembers from "../TeamMembers";
 
 function Home() {
   return (
     <Layout>
       <Hero />
-      <MarketTrend />
+      {/* <MarketTrend /> */}
       <Features />
       <CallToAction />
+      <IBANSection/>
       <MarketUpdate />
+      <Progress/>
+      <PolygonLayerSolution/>
+      <TeamMembers/>
       <GetStarted />
       <LearnCrypto />
     </Layout>

@@ -4,12 +4,14 @@
 import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
+import AnimatedBackground from "./AnimatedBackground";
 
 function Layout({ children }) {
   return (
-    <div className="flex overflow-hidden flex-col items-center bg-slate-950">
+    <div className="flex overflow-hidden flex-col items-center w-full">
+      <AnimatedBackground />
       <Header />
-      <main className="flex flex-col items-center w-full max-w-[1280px] px-4">
+      <main className="flex flex-col items-center w-full   px-4 lg:px-32 z-30">
         {children}
       </main>
       <Footer />

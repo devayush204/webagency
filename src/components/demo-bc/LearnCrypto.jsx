@@ -64,19 +64,19 @@ const articles = [
 
 function LearnCrypto() {
   return (
-    <section className="flex flex-col mt-48 w-full max-w-[1262px] max-md:mt-10 max-md:max-w-full">
-      <div className="flex flex-col w-full text-center max-md:max-w-full">
-        <h2 className="flex-1 shrink gap-2.5 p-2.5 w-full text-4xl font-bold leading-none text-gray-100 max-md:max-w-full">
+    <section className="flex flex-col mt-20 w-full ">
+      <div className="flex flex-col w-full text-center">
+        <h2 className="flex-1 shrink gap-2.5 p-2.5 w-full text-4xl font-bold leading-none text-gray-800 ">
           Learn About Cryptocurrency
         </h2>
-        <p className="flex-1 shrink gap-2.5 p-1.5 mt-2.5 w-full text-lg leading-relaxed text-zinc-400 max-md:max-w-full">
+        {/* <p className="flex-1 shrink gap-2.5 p-1.5 mt-2.5 w-full text-lg leading-relaxed text-zinc-400 max-md:max-w-full">
           Learn all about cryptocurrency to start investing
-        </p>
+        </p> */}
       </div>
-      <div className="flex flex-col mt-16 w-full min-h-[825px] max-md:mt-10 max-md:max-w-full">
+      <div className="flex flex-col mt-10 w-full  max-md:mt-10 max-md:max-w-full">
         <div className="flex flex-wrap flex-1 gap-7 items-start size-full max-md:max-w-full">
           <FeaturedArticle {...featuredArticle} />
-          <div className="flex flex-wrap flex-1 shrink gap-7 items-start leading-6 basis-[74px] min-w-[240px] text-zinc-400 max-md:max-w-full">
+          <div className="flex flex-wrap flex-1 shrink gap-7 items-start leading-6   text-zinc-400 max-md:max-w-full">
             {articles.slice(0, 2).map((article, index) => (
               <ArticleCard key={index} {...article} />
             ))}
@@ -88,9 +88,9 @@ function LearnCrypto() {
           ))}
         </div>
       </div>
-      <button className="flex-1 shrink gap-2.5 self-stretch mt-16 w-full text-base font-semibold text-teal-500 underline max-md:mt-10 max-md:max-w-full">
+      {/* <button className="flex-1 shrink gap-2.5 self-stretch mt-16 w-full text-base font-semibold text-teal-500 underline max-md:mt-10 max-md:max-w-full">
         See All Articles
-      </button>
+      </button> */}
     </section>
   );
 }

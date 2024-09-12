@@ -13,24 +13,24 @@ function CryptoTableRow({
   icon,
 }) {
   return (
-    <div className="flex overflow-hidden flex-wrap gap-10 justify-between items-center py-2.5 pr-2.5 pl-8 w-full border border-solid bg-white bg-opacity-0 border-white border-opacity-10 min-h-[62px] max-md:pl-5 max-md:max-w-full">
-      <div className="flex flex-wrap justify-center items-center self-stretch my-auto text-base whitespace-nowrap min-w-[240px] text-zinc-400 max-md:max-w-full">
-        <div className="overflow-hidden self-stretch py-1 pr-2.5 my-auto w-[74px]">
+    <div className="flex overflow-hidden  gap-10 justify-between items-center  w-full border border-solid bg-white bg-opacity-0 border-white border-opacity-10 ">
+      <div className="flex  justify-center items-center  text-base text-zinc-400 ">
+        <div className="overflow-hidden">
           {id}
         </div>
-        <div className="flex gap-6 justify-center items-center self-stretch my-auto min-w-[240px]">
+        <div className="flex gap-6 justify-center items-center  ">
           <img
             loading="lazy"
             src={icon}
             alt={`${name} icon`}
             className="object-contain shrink-0 self-stretch my-auto w-11 aspect-square"
           />
-          <div className="flex gap-3 items-center self-stretch my-auto min-w-[240px] w-[343px]">
+          <div className="flex gap-3 items-center ">
             <div className="overflow-hidden self-stretch py-1 pr-2.5 my-auto">
               {name}
             </div>
-            <div className="flex shrink-0 self-stretch my-auto w-px h-6 rounded-sm bg-stone-700" />
-            <div className="overflow-hidden flex-1 shrink self-stretch py-1 pr-2.5 my-auto text-right min-w-[240px]">
+    
+            <div className="overflow-hidden flex-1 ">
               {symbol}
             </div>
           </div>
