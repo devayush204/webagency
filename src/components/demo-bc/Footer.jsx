@@ -249,7 +249,7 @@ const Footer = () => {
           >
             <Image
               src={img}
-              className="w-20 scale-[5.5] lg:m-0 m-4 md:ml-5"
+              className="w-20 scale-[2.5] lg:m-0 m-4 md:ml-5"
               alt="img"
             />
           </Link>

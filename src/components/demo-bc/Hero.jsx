@@ -7,7 +7,7 @@ import math from "../../../public/images/math.png";
 import wise from "../../../public/images/wise.png";
 import revoult from "../../../public/images/revoult.png";
 import visa from "../../../public/images/visa.png";
-import img from "../../../public/images/hero-desktop.webp";
+import img from "../../../public/images/hero-desktop.png";
 
 import React, { useEffect, useState } from "react";
 import img3 from "../../../public/hero2.png";

@@ -4,7 +4,7 @@ import React from "react";
 
 function FeatureCard({ icon, title, description }) {
   return (
-    <div className="flex overflow-hidden flex-1 shrink gap-2.5 items-center self-stretch py-8 pr-8 pl-7 my-auto rounded-2xl border border-solid backdrop-blur-[100px]  shadow-2xl basis-0 bg-white bg-opacity-0 border-white border-opacity-10 min-w-[240px] max-md:px-5">
+    <div className="flex hover:scale-110 transition-all overflow-hidden flex-1 shrink gap-2.5 items-center self-stretch py-8 pr-8 pl-7 my-auto rounded-2xl border border-solid backdrop-blur-[100px]  shadow-2xl basis-0 bg-white bg-opacity-0 border-white border-opacity-10 min-w-[240px] max-md:px-5">
       <div className="flex flex-col flex-1 shrink self-stretch my-auto w-full basis-0 ">
         <div className="flex flex-col w-full ">
           <div className="flex gap-2.5 items-start w-20 min-h-[80px]">

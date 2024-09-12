@@ -58,7 +58,7 @@ const RevenueModel = () => {
         {data.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col gap-5 items-center text-center bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 "
+            className="flex flex-col hover:scale-110 gap-5 items-center text-center bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 "
           >
             {index % 2 === 0 ? (
               <>
