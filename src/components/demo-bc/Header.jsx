@@ -17,31 +17,38 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [theme, setTheme] = useState("theme1");
   const pathname = usePathname();
-  const [scrollY, setScrollY] = useState(0);
-  
-  const navbarRef = useRef(null); // Create a reference for the navbar
+  const navLinksRef = useRef([]); // Reference for the navigation links
 
-  const handleScroll = () => {
-    setScrollY(window.scrollY);
-  };
-
+  // GSAP animation for the navbar and other elements (except sidebar)
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  // Animation on first load
-  useEffect(() => {
-    const navbarElement = navbarRef.current;
-
-    // GSAP animation: start width from 0 and expand to full width
+    // Animate navbar separately by targeting its class
     gsap.fromTo(
-      navbarElement,
-      { width: "0%", transformOrigin: "center" },
-      { width: "100%", duration: 2, ease: "power2.inOut" } // Change duration and ease as per your liking
+      ".navbar-animation", // Target the navbar with class
+      { width: "0%" },
+      { width: "100%", duration: 2, ease: "power2.inOut" }
     );
+
+    // Animate logo separately by targeting its class
+    gsap.fromTo(
+      ".logo-animation", // Target the logo with class
+      { opacity: 0, scale: 0.8 },
+      { opacity: 1, scale: 1, duration: 1.5, ease: "back.out(1.7)" }
+    );
+
+    // Animate navigation links one by one using refs
+    navLinksRef.current.forEach((link, index) => {
+      gsap.fromTo(
+        link,
+        { opacity: 0, y: -20 },
+        {
+          opacity: 1,
+          y: 0,
+          delay: 0.2 * index, // Stagger the animation for each link
+          duration: 1,
+          ease: "power2.out",
+        }
+      );
+    });
   }, []);
 
   const getThemeClasses = () => {
@@ -52,34 +59,6 @@ function Header() {
           text: "text-black",
           hover: "hover:text-black",
           active: "text-purple-400",
-        };
-      case "theme2":
-        return {
-          background: "bg-dark-slate",
-          text: "text-bright-yellow",
-          hover: "hover:text-orange",
-          active: "text-orange",
-        };
-      case "theme3":
-        return {
-          background: "bg-deep-indigo",
-          text: "text-electric-pink",
-          hover: "hover:text-hot-pink",
-          active: "text-hot-pink",
-        };
-      case "theme4":
-        return {
-          background: "bg-charcoal",
-          text: "text-mint-green",
-          hover: "hover:text-spring-green",
-          active: "text-spring-green",
-        };
-      case "theme5":
-        return {
-          background: "bg-dark-navy",
-          text: "text-soft-amber",
-          hover: "hover:text-coral",
-          active: "text-coral",
         };
       default:
         return {
@@ -95,21 +74,21 @@ function Header() {
 
   return (
     <header
-      ref={navbarRef} // Reference for GSAP animation
-      className={`${themeClasses.background} ${themeClasses.text} bg-transparent shadow-xl z-50 shadow- navbar  fixed flex items-center md:justify-between  lg:px-40 px-10 py-3 md:py-4 w-[100vw] backdrop-blur-md bg-opacity-20`}
+      className={` ${themeClasses.background} ${themeClasses.text} bg-transparent shadow-xl z-50 shadow- fixed flex items-center md:justify-between lg:px-40 px-10 py-3 md:py-4 w-[100vw] backdrop-blur-md bg-opacity-20`}
     >
-      <div className="flex justify-between items-center  w-full">
+      <div className="flex navbar-animation justify-between items-center w-full">
         <Link href="/">
           <Image
             src={logo}
             alt="Neo BlockChain Bank"
-            className="w-20 scale-[1.5] md:scale-[2.0] lg:scale-[2.5] "
+            className="logo-animation w-20 scale-[1.5] md:scale-[2.0] lg:scale-[2.5]"
           />
         </Link>
-        <div className="hidden  lg:flex lg:gap-20">
+        <div className="hidden lg:flex lg:gap-20">
           {navItems.map((item, index) => (
             <Link key={index} href={item.link} className="text-xl md:text-2xl">
               <li
+                ref={(el) => (navLinksRef.current[index] = el)} // Reference for each nav link animation
                 className={`${
                   pathname === item.link
                     ? `${themeClasses.active} font-bold`
@@ -131,15 +110,16 @@ function Header() {
             <Bars3Icon className="w-8 h-8 absolute right-32 md:right-44" />
           )}
         </button>
-        <div className="">
+        <div>
           <button className="md:px-10 px-4 py-2 rounded-3xl text-lg bg-purple-400 text-white">
             Login
           </button>
         </div>
       </div>
-      {/* Sidebar for mobile */}
+
+      {/* Sidebar for mobile (excluded from animations) */}
       <div
-        className={`fixed  top-0 right-0 z-50 h-screen  md:w-1/3 w-2/3  bg-white transform ${
+        className={`fixed top-0 right-0 z-50 h-screen md:w-1/3 w-2/3 bg-white transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out lg:hidden`}
       >
@@ -150,9 +130,9 @@ function Header() {
                 className={`${
                   pathname === item.link
                     ? `${themeClasses.active} font-bold list-none`
-                    : `text-black`
+                    : "text-black"
                 } ${themeClasses.hover} list-none text-lg`}
-                onClick={() => setIsOpen(false)}
+                onClick={() => setIsOpen(false)} // Close sidebar on link click
               >
                 {item.label}
               </li>

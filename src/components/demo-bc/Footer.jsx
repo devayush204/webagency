@@ -40,51 +40,51 @@ const Footer = () => {
 
     <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
       <div className="text-center sm:text-left">
-        <p className="text-lg font-medium text-gray-900">About Us</p>
+        <p className="text-lg font-medium text-gray-900">Legal</p>
 
         <ul className="mt-8 space-y-4 text-sm">
           <li>
             <a className="text-gray-700 transition hover:text-gray-700/75" href="#">
-              Company History
+            Privacy Policy
             </a>
           </li>
 
           <li>
-            <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Meet the Team </a>
+            <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Security Policy </a>
           </li>
 
           <li>
             <a className="text-gray-700 transition hover:text-gray-700/75" href="#">
-              Employee Handbook
+              Terms and Condition
             </a>
           </li>
 
           <li>
-            <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Careers </a>
+            <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Cookie Policy </a>
           </li>
         </ul>
       </div>
 
       <div className="text-center sm:text-left">
-        <p className="text-lg font-medium text-gray-900">Our Services</p>
+        <p className="text-lg font-medium text-gray-900">Quick Links</p>
 
         <ul className="mt-8 space-y-4 text-sm">
           <li>
-            <a className="text-gray-700 transition hover:text-gray-700/75" href="#">
-              Web Development
+            <a className="text-gray-700 transition hover:text-gray-700/75" href="/aboutus">
+              About
             </a>
           </li>
 
           <li>
-            <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Web Design </a>
+            <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> White Paper</a>
           </li>
 
           <li>
-            <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Marketing </a>
+            <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Audit Report </a>
           </li>
 
           <li>
-            <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Google Ads </a>
+            <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Connect Wallet </a>
           </li>
         </ul>
       </div>
@@ -256,7 +256,7 @@ const Footer = () => {
         </div>
 
         <p className="mt-4 text-center text-sm text-gray-500 sm:mt-0 sm:text-right">
-          Copyright &copy; 2022. All rights reserved.
+          NBCB Copyright &copy; 2024. All rights reserved.
         </p>
       </div>
     </div>
