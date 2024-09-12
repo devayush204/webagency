@@ -81,7 +81,7 @@ function Header() {
           <Image
             src={logo}
             alt="Neo BlockChain Bank"
-            className="logo-animation w-20 scale-[1.5] md:scale-[2.0] lg:scale-[2.5]"
+            className="logo- w-20 scale-[1.5] md:scale-[2.0] lg:scale-[2.0]"
           />
         </Link>
         <div className="hidden lg:flex lg:gap-20">
