@@ -90,7 +90,7 @@ function Header() {
 
   return (
     <header
-      className={`${themeClasses.background} ${themeClasses.text} bg-transparent shadow-xl z-50 shadow- navbar  fixed flex items-center md:justify-between  lg:px-40 px-10 py-7 w-[100vw]`}
+      className={`${themeClasses.background} ${themeClasses.text} bg-transparent shadow-xl z-50 shadow- navbar  fixed flex items-center md:justify-between  lg:px-40 px-10 py-7 w-[100vw] backdrop-blur-md bg-opacity-20 `}
     >
       <div className="flex justify-between items-center  w-full">
         <Link href="/">
