@@ -41,12 +41,12 @@ function Hero() {
         {/* <p className="md:text-5xl text-2xl text-black font-bold">
           B-to-Me Bank
         </p> */}
-        <p className="md:text-4xl text-3xl text-center font-semibold text-black">
+        <p className="md:text-4xl text-3xl text-center font-semibold text-purple-500">
           Future Of Universal Economy
         </p>
         <span className="relative text-center md:w-[60%] p-2">
           <span
-            className="relative text-xl inset-0 transition-all duration-3000 ease-out rounded-xl font-bold text-center bg-clip-text text-transparent bg-purple-400"
+            className="relative text-xl inset-0 transition-all duration-3000 ease-out rounded-xl font-bold text-center bg-clip-text text-transparent bg-black"
             style={{ width: `${animationWidth}%` }}
           >
             {animatedText}

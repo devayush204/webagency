@@ -14,6 +14,9 @@ import IBANSection from "../IBANSection";
 import Progress from "../Progress";
 import PolygonLayerSolution from "../PolygonLayer";
 import TeamMembers from "../TeamMembers";
+import OurApproach from "../OurApproach";
+import LetsConnect from "../LetsConnect";
+import EventList from "../Events";
 
 function Home() {
   return (
@@ -21,14 +24,17 @@ function Home() {
       <Hero />
       {/* <MarketTrend /> */}
       <Features />
+      <OurApproach/>
       <CallToAction />
       <IBANSection/>
       <MarketUpdate />
       <Progress/>
       <PolygonLayerSolution/>
       <TeamMembers/>
+      <EventList/>
       <GetStarted />
       <LearnCrypto />
+      <LetsConnect/>
     </Layout>
   );
 }

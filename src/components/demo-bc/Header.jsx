@@ -90,14 +90,14 @@ function Header() {
 
   return (
     <header
-      className={`${themeClasses.background} ${themeClasses.text} bg-transparent shadow-xl z-50 shadow- navbar  fixed flex items-center md:justify-between  lg:px-40 px-10 py-7 w-[100vw] backdrop-blur-md bg-opacity-20 `}
+      className={`${themeClasses.background} ${themeClasses.text} bg-transparent shadow-xl z-40 shadow- navbar  fixed flex items-center md:justify-between  lg:px-40 px-10 py-3 md:py-7 w-[100vw] backdrop-blur-md bg-opacity-20 `}
     >
       <div className="flex justify-between items-center  w-full">
         <Link href="/">
           <Image
             src={logo}
             alt="Neo BlockChain Bank"
-            className="w-20 scale-[2.5] "
+            className="w-20 scale-[1.5] md:scale-[2.0] lg:scale-[2.5] "
           />
         </Link>
         <div className="hidden  lg:flex lg:gap-20">
@@ -120,9 +120,9 @@ function Header() {
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? (
-            <XMarkIcon className="w-8 h-8 z-20 absolute top-5 right-[55%] md:right-[25%] text-black" />
+            <XMarkIcon className="w-8 h-8 z-[60] absolute top-5 right-[55%] md:right-[25%] text-black" />
           ) : (
-            <Bars3Icon className="w-8 h-8 absolute right-32 md:right-40" />
+            <Bars3Icon className="w-8 h-8 absolute right-32 md:right-44" />
           )}
         </button>
         <div className="">
@@ -133,9 +133,7 @@ function Header() {
       </div>
       {/* Sidebar for mobile */}
       <div
-        className={`fixed top-0 right-0 h-full md:w-1/3 w-2/3 ${
-          themeClasses.background
-        } transform ${
+        className={`fixed top-0 right-0 z-50 h-full md:w-1/3 w-2/3 bg-white transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out lg:hidden`}
       >

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const eventData = [
@@ -39,7 +40,7 @@ const eventData = [
   },
 ];
 
-const vdo = "/images/video.mp4";
+const vdo = "/video.mp4";
 
 const EventList = () => {
   return (
@@ -55,7 +56,7 @@ const EventList = () => {
                 key={index}
                 className="flex items-start space-x-4 hover:bg-white/60   group px-4 py-7 rounded-lg"
               >
-                <div className="flex items-center w-16 p-2 justify-center bg-gradient-to-r  from-purple-500 to-indigo-500 text-black rounded-md text-sm font-bold">
+                <div className="flex items-center w-16 p-2 justify-center bg-purple-500 text-white rounded-md text-sm font-bold">
                   <p>{event.date}</p>
                 </div>
                 <div className="flex-grow">
@@ -70,12 +71,12 @@ const EventList = () => {
             ))}
           </div>
           <div className="mt-8 text-center">
-            <a
-              href="#"
-              className="bg-gradient-to-r  from-purple-500 to-indigo-500 text-black py-4 px-4 rounded-full hover:bg-[#9E3DC6]"
+            <p
+              
+              className="bg-gradient-to-r  from-purple-500 to-indigo-500 text-white hover:translate-x-4 transition-all hover:scale-110 py-4 px-4 rounded-full hover:bg-[#9E3DC6]"
             >
               VIEW MORE EVENTS →
-            </a>
+            </p>
           </div>
         </div>
 
