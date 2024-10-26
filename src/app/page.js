@@ -18,7 +18,7 @@ export default function Page() {
       <FAQ/>
       <Blog/>
       <Footer/> 
-      // <Home/>
+      
     </section>
   );
 }
