@@ -11,14 +11,14 @@ import Home from "@/components/demo-bc/pages/Home";
 export default function Page() {
   return (
     <section>
-      {/* <Navbar/>
+       <Navbar/>
       <Hero/>
       <ServicesSection/>
       <ReviewsCarousel/>
       <FAQ/>
       <Blog/>
-      <Footer/> */}
-      <Home/>
+      <Footer/> 
+      // <Home/>
     </section>
   );
 }
